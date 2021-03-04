@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'SiteSpaController@index');
+Route::get(uri: '/', action: 'App\Http\Controllers\SiteSpaController@index');
+Route::get(uri: '/price', action: 'App\Http\Controllers\SiteSpaController@price');
+Route::get('/contacts',  'App\Http\Controllers\SiteSpaController@contacts');
