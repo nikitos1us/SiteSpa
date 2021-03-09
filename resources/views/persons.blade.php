@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="css/app.css" rel="stylesheet" type="text/css"/>
+    @include('script_link')
     <title>Спа-салон Афродита</title>
 </head>
 
@@ -23,7 +23,7 @@
 
 
     </div>
-    @include('resources.views.additional.footer');
+    @include('additional.footer');
 </div>
 </body>
 

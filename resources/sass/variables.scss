@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: Beatrice; /* Гарнитура шрифта */
+    src: url(fonts/beatrice.ttf); /* Путь к файлу со шрифтом */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +23,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: normal;
     hyphens: auto;
-    background: url(files/fon.jpg);
+    background: url(files/fon1.jpg);
 }
 
 html,
@@ -31,7 +37,7 @@ body {
 }
 
 content {
-    padding-bottom: 90px;
+
 }
 main{
     align-content: center;
@@ -41,18 +47,16 @@ main{
 }
 
 .header-text {
-    font-family: fantasy;
-    padding: 1rem 0;
-    font-size: 2rem;
+    font-family: 'Beatrice';
+
+    font-size: 2vw;
+    width: 100%;
+    align-self: center;
     text-align: center;
-    color: #be6500;
-    background-color: white;
+    color: saddlebrown;
+    background-color: #f8f8f8;
 
-}
 
-page-content {
-    display: flex;
-    flex: 1 0 auto;
 }
 
 .main-footer {
@@ -61,10 +65,7 @@ page-content {
     bottom: 0;
     width: 100%;
     height: 40px;
-
-    background-color: white;
     color: peru;
-
     align-content: center;
     align-self: center;
     text-align: center;
@@ -72,19 +73,29 @@ page-content {
 
 
 /* UIkit reformated styles */
-.uk-navbar-nav > li:hover > a,
-.uk-navbar-nav > li > a:focus,
-.uk-navbar-nav > li > a.uk-open {
-    color: #b31818;
-    outline: none;
+
+.uk-navbar-dropdown-nav > li > a {
+    color: #d0948a;
+    font-size: 1.5vw;
 }
 
-.uk-slideshow{
-    display: inline-block;
-    width: 50vw;
-    margin-top: 2px;
-    margin-bottom: 10px;
 
+.uk-navbar-dropdown-nav > li:hover > a,
+.uk-navbar-dropdown-nav > li > a:focus,
+.uk-navbar-dropdown-nav > li > a.uk-open {
+    color: #d0d1fc;
+    outline: none;
+    font-size: 2vw;
+}
+.uk-navbar-container{
+    margin-top: -25px;
+    margin-bottom: 0;
+
+}
+
+.uk-navbar-dropdown{
+    width: 100%;
+    background: url(files/menu-fon.jpg);
 }
 
 .uk-margin-remove{
@@ -92,11 +103,22 @@ page-content {
 }
 
 .uk-section {
-    margin-top: 2px;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.uk-section-intro {
+    margin-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
 }
 
 .uk-slider{
     margin-top: 10px;
+    height: auto;
+}
+
+.uk-transition-slide-bottom-small{
+    height: auto;
+    font-size: 5vw;
+    color: khaki;
 }

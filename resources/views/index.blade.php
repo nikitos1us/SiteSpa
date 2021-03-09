@@ -8,8 +8,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="css/app.css" rel="stylesheet" type="text/css"/>
-    <script src="js/app.js"/>
+    @include('script_link')
     <title>Спа-салон Афродита</title>
 </head>
 
@@ -21,12 +20,10 @@
     <div class="content">
         <header>
             @include('navbar_personalized.navbar_index')
-
         </header>
 
         <main>
-
-            <div class="uk-section uk-section-muted">
+            <div class="uk-section uk-section-muted" uk-section-intro>
                 <div class="uk-container">
                     <h3>Добро пожаловать на сайт Спа-салона Афродита!</h3>
                     <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
