@@ -1,4 +1,11 @@
 
+@import "_variables";
+
+
+@import "node_modules/uikit/src/scss/variables-theme";
+@import "node_modules/uikit/src/scss/mixins-theme";
+@import "node_modules/uikit/src/scss/uikit-theme";
+
 
 html {
     font-family: 'Open Sans', sans-serif;
@@ -31,9 +38,7 @@ body {
 header ul .menu li a:active{
     color: #164b53;
 }
-header ul li a:visited{
-    color: #0fff0a;
-}
+
 
 .main-content{
     flex: 1 0 auto;
@@ -44,3 +49,4 @@ footer .main-footer {
     position: center;
     text-align: center;
 }
+
