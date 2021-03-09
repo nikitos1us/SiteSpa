@@ -1,39 +1,60 @@
 @section('content')
-{{
-    $test
-}}
+{{ $content_type }}
 @endsection
 
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="css/app.css" rel="stylesheet" type="text/css" />
+    <link href="css/app.css" rel="stylesheet" type="text/css"/>
+    <script src="js/app.js"/>
+    <title>Спа-салон Афродита</title>
 </head>
-</head>
+
+
 <body>
-<div class="content">
-    <h1 class="header-text">Спа-салон Афродита</h1>
 
-    <header>
-        <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="/persons">Персонал</a></li>
-            <li><a href="/price">Прайс-лист</a></li>
-            <li><a href="/contacts">Контакты</a></li>
-        </ul>
-    </header>
+<div class="wrapper">
 
-    <main>
-        <a>trululu</a>
-        <div>@yield('content')</div>
+    <div class="content">
+        <header>
+            @include('navbar_personalized.navbar_index')
 
-    </main>
+        </header>
+
+        <main>
+
+            <div class="uk-section uk-section-muted">
+                <div class="uk-container">
+                    <h3>Добро пожаловать на сайт Спа-салона Афродита!</h3>
+                    <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                        <div>
+                            <p>Мы предоставляем различные услуги</p>
+                        </div>
+                        <div>
+                            <p>Например, массаж спины, массаж лица</p>
+                        </div>
+                        <div>
+                            <p>А также у нас есть хамам!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+            @include('additional.index_slideshow')
 
+        </main>
+
+    </div>
+
+    @include('additional.footer')
 </div>
+
 </body>
-<footer class="main-footer"> Fuck</footer>
+
+
 </html>
 

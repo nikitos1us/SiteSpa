@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 
 class SiteSpaController extends Controller
 {
+
+
     public function index(){
-        return view('index')->with('test','asdasd');
+        return view('index')->with('content_type','main');
     }
     public function persons(){
         return view('persons');
