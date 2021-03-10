@@ -1,4 +1,3 @@
-<h1 class="header-text">Spa & Beauty - salon "Afrodita"</h1>
 
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">

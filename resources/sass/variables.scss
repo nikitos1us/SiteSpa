@@ -1,7 +1,9 @@
-
 @font-face {
     font-family: Beatrice; /* Гарнитура шрифта */
     src: url(fonts/beatrice.ttf); /* Путь к файлу со шрифтом */
+}
+@media all {
+
 }
 
 * {
@@ -34,12 +36,14 @@ body {
 .wrapper {
     position: relative;
     min-height: 100%;
+    z-index: 0;
 }
 
 content {
 
 }
-main{
+
+main {
     align-content: center;
     align-self: center;
     text-align: center;
@@ -48,14 +52,22 @@ main{
 
 .header-text {
     font-family: 'Beatrice';
-
     font-size: 2vw;
+    min-font-size: 5px;
     width: 100%;
     align-self: center;
     text-align: center;
     color: saddlebrown;
     background-color: #f8f8f8;
+    min-height: 20px;
+    max-height: 60px;
+}
 
+.persons-header{
+    font-size: 2.6vw;
+    color: saddlebrown;
+    background: #f8f8f8;
+    margin-top: -5px;
 
 }
 
@@ -74,6 +86,7 @@ main{
 
 /* UIkit reformated styles */
 
+/* Menu */
 .uk-navbar-dropdown-nav > li > a {
     color: #d0948a;
     font-size: 1.5vw;
@@ -87,18 +100,20 @@ main{
     outline: none;
     font-size: 2vw;
 }
-.uk-navbar-container{
+
+.uk-navbar-container {
     margin-top: -25px;
     margin-bottom: 0;
-
 }
 
-.uk-navbar-dropdown{
+.uk-navbar-dropdown {
     width: 100%;
+    margin-top: -25px;
     background: url(files/menu-fon.jpg);
 }
 
-.uk-margin-remove{
+
+.uk-margin-remove {
     font-size: 5vw;
 }
 
@@ -106,19 +121,47 @@ main{
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
 .uk-section-intro {
     margin-top: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
 }
 
-.uk-slider{
+.uk-slider {
     margin-top: 10px;
     height: auto;
 }
 
-.uk-transition-slide-bottom-small{
+.uk-transition-slide-bottom-small {
     height: auto;
     font-size: 5vw;
     color: khaki;
 }
+
+
+/* Для вкладки Персонал */
+
+
+.uk-grid {
+    .uk-child-width-1-1\@s {
+        width: 90%;
+        padding-bottom: 15px;
+    }
+}
+
+.uk-card {
+    background: linear-gradient(45deg, #d4eeba, #dfc5e8);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.uk-card-title {
+    font-size: 5vw;
+}
+
+.uk-child-width-1-1 {
+    margin-bottom: 20px;
+}
+
+

@@ -3,8 +3,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    @include('script_link')
     <title>Спа-салон Афродита</title>
+    @include('script_link')
 </head>
 
 
@@ -12,19 +12,24 @@
 
 <div class="wrapper">
 
-    <div class="content">
+    <div class="content " uk-height-viewport="offset-bottom: 60px">
         <header>
+            <h1 class="header-text">Spa & Beauty - salon "Afrodita"</h1>
             @include('navbar_personalized.navbar_persons')
         </header>
-
-        <main>
-
-        </main>
-
+        <section class="uk-section">
+            <main>
+                <h2 class="persons-header">Персонал</h2>
+                @include('additional.persons_content')
+            </main>
+        </section>
 
     </div>
-    @include('additional.footer');
+
+    @include('additional.footer')
 </div>
+
+
 </body>
 
 </html>
