@@ -3,13 +3,14 @@
 @endsection
 
 
-    <!DOCTYPE html>
+
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    @include('script_link')
     <title>Спа-салон Афродита</title>
+    @include('script_link')
+
 </head>
 
 
@@ -17,12 +18,14 @@
 
 <div class="wrapper">
 
-    <div class="content">
+    <div class="content" uk-height-viewport="offset-bottom: 40px">
         <header>
+            <h1 class="header-text" header-text>Spa & Beauty - salon "Afrodita"</h1>
             @include('navbar_personalized.navbar_index')
         </header>
 
         <main>
+
             <div class="uk-section uk-section-muted" uk-section-intro>
                 <div class="uk-container">
                     <h3>Добро пожаловать на сайт Спа-салона Афродита!</h3>

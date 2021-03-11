@@ -1,14 +1,15 @@
-<h1 class="header-text">Спа-салон Афродита</h1>
-
-<nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-
-        <ul class="uk-navbar-nav">
-            <li><a href="/">Главная</a></li>
-            <li ><a href="/persons">Персонал</a></li>
-            <li><a href="/price">Прайс-лист</a></li>
-            <li class="uk-active"><a href="/contacts">Контакты</a></li>
+<div class="uk-nav-center">
+    <div style="font-family: 'Beatrice';font-size: 2vw;color: saddlebrown"
+         class="uk-button ">MENU
+    </div>
+    <div uk-dropdown="boundary: .boundary; pos: bottom-center">
+        <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li><a style="color: white">Главная</a></li>
+            <li><a href="./persons">Персонал</a></li>
+            <li><a href="./price">Прайс-лист</a></li>
+            <li><a href="./contacts">Контакты</a></li>
         </ul>
 
     </div>
-</nav>
+</div>
+
