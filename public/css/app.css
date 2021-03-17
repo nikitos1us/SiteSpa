@@ -12523,6 +12523,7 @@ main {
 
 /* Главная страница - контент */
 .uk-section-muted {
+  color: #32d296;
   padding-top: 5px;
   padding-bottom: 10px;
 }
@@ -12547,6 +12548,10 @@ main {
 .uk-grid .uk-child-width-1-1\@s {
   width: 90%;
   padding-bottom: 15px;
+}
+
+.uk-section .uk-section-default {
+  background-color: cyan;
 }
 
 .uk-card {

@@ -3,10 +3,6 @@
     src: url(fonts/beatrice.ttf); /* Путь к файлу со шрифтом */
 }
 
-@media all {
-
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -38,10 +34,6 @@ body {
     position: relative;
     min-height: 100%;
     z-index: 0;
-}
-
-content {
-
 }
 
 main {
@@ -123,11 +115,6 @@ main {
 
 
 /* Главная страница - контент */
-.uk-section-muted {
-
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
 
 .uk-section-intro {
 
@@ -155,6 +142,10 @@ main {
         width: 90%;
         padding-bottom: 15px;
     }
+}
+
+.uk-section .uk-section-default{
+    background-color: cyan;
 }
 
 .uk-card {
