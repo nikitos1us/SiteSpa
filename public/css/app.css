@@ -12418,6 +12418,12 @@ h3 {
   src: url(/fonts/beatrice.ttf?98d929bc74bfa8825e9a6314eb90d20e);
   /* Путь к файлу со шрифтом */
 }
+@font-face {
+  font-family: Futurespore Cyrillic;
+  /* Гарнитура шрифта */
+  src: url(/fonts/futurespore_cyrillic.otf?0ba8fef10dc5e6fe71accb0836e5c9c8);
+  /* Путь к файлу со шрифтом */
+}
 * {
   margin: 0;
   padding: 0;
@@ -12425,6 +12431,8 @@ h3 {
 
 html {
   font-family: "Open Sans", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/fon3.png?6d752d166720f2b8721d920345f7be69);
+  background-repeat: repeat;
 }
 
 body {
@@ -12439,14 +12447,15 @@ body {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  background: url(/images/background2.png?8c796cf90104656a342ac6808a720633);
-  background-position: center center;
-  background-size: cover;
+}
+
+body:after {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 .wrapper {
@@ -12508,14 +12517,20 @@ main {
 /* UIkit reformated styles */
 /* Menu */
 .uk-navbar-dropdown-nav > li > a {
-  color: #d0948a;
+  color: #b81300;
+  font-family: "Futurespore Cyrillic";
   font-size: 1.5vw;
+  font-weight: bold;
 }
 
 .uk-navbar-dropdown-nav > li:hover > a,
 .uk-navbar-dropdown-nav > li > a:focus,
 .uk-navbar-dropdown-nav > li > a.uk-open {
-  color: #d0d1fc;
+  color: #410334;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px #7042b7, 0 0 20px #b15e5e, 0 0 30px #b15e5e, 0 0 40px #ff85f5, 0 0 70px #ff85f5, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   outline: none;
 }
 
@@ -12527,7 +12542,12 @@ main {
 
 .uk-navbar-dropdown-nav {
   width: 20vw;
-  background: url(/images/menu-fon3.jpg?d9531643a421600465557cc053c85d28);
+  background: url(/images/background1.jpg?d22c83b06830b8167ea995b7155edf1b);
+}
+
+.uk-dropdown {
+  min-width: auto;
+  padding: 0px;
 }
 
 /* Главная страница - контент */
@@ -12548,7 +12568,7 @@ main {
   color: khaki;
 }
 
-/* Для вкладки Персонал */
+/* Персонал */
 .uk-grid .uk-child-width-1-1\@s {
   width: 90%;
   padding-bottom: 15px;
@@ -12558,6 +12578,8 @@ main {
   background: linear-gradient(45deg, #eed1ba, #ecb4b4);
   margin-bottom: 10px;
   padding-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .uk-card-title {
@@ -12570,5 +12592,35 @@ main {
 
 /* Прайс-лист */
 .uk-section-default {
-  background: antiquewhite;
+  margin-left: 50px;
+  margin-right: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/background1.jpg?d22c83b06830b8167ea995b7155edf1b);
+}
+
+.uk-table {
+  width: 35vw;
+}
+
+.uk-table-hover > tr:hover,
+.uk-table-hover tbody tr:hover {
+  background: #ffc3f7;
+}
+
+.uk-table th {
+  text-align: center;
+  font-size: 1.2vw;
+  color: #292929;
+}
+
+.uk-table td {
+  padding: 16px 12px;
+  vertical-align: top;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 640px) {
+  .main-footer {
+    height: 100px;
+    padding-bottom: 10px;
+  }
 }

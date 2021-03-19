@@ -5,6 +5,8 @@
     "/images/background2.png": "/images/background2.png",
     "/images/fon.jpg": "/images/fon.jpg",
     "/images/fon1.jpg": "/images/fon1.jpg",
+    "/images/fon2.png": "/images/fon2.png",
+    "/images/fon3.png": "/images/fon3.png",
     "/images/hamam.jpg": "/images/hamam.jpg",
     "/images/massage1.jpg": "/images/massage1.jpg",
     "/images/massage2.jpg": "/images/massage2.jpg",
@@ -17,5 +19,7 @@
     "/images/shok_ob.jpg": "/images/shok_ob.jpg",
     "/images/shugaring.jpg": "/images/shugaring.jpg",
     "/images/solar.jpg": "/images/solar.jpg",
-    "/fonts/beatrice.ttf": "/fonts/beatrice.ttf"
+    "/images/white-buds.png": "/images/white-buds.png",
+    "/fonts/beatrice.ttf": "/fonts/beatrice.ttf",
+    "/fonts/futurespore_cyrillic.otf": "/fonts/futurespore_cyrillic.otf"
 }

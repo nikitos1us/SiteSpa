@@ -1,12 +1,12 @@
 <div class="uk-section uk-section-default">
 
-    <div class="uk-container">
+
         <div class="uk-grid uk-grid-match uk-child-width-1-2@l  uk-child-width-1-2@m  uk-child-width-1-1@s ">
             <div>
 
                 <div class="uk-cover-container">
-                    <h2 class="uk-h2"> Зональный массаж </h2>
-                    <table class="uk-table uk-table-hover uk-table-divider">
+                    <h2 class="uk-h2" style="font-size: 2vw"> Зональный массаж </h2>
+                    <table class="uk-table uk-align-center uk-table-hover uk-table-divider">
 
                         <thead>
                         <tr style="align-self: center">
@@ -52,8 +52,8 @@
             <div>
 
                 <div class="uk-cover-container">
-                    <h2 class="uk-h2"> Массаж </h2>
-                    <table class="uk-table uk-table-hover uk-table-divider">
+                    <h2 class="uk-h2" style="font-size: 2vw "> Массаж </h2>
+                    <table class="uk-table uk-align-center uk-table-hover uk-table-divider">
 
                         <thead>
                         <tr style="align-self: center">
@@ -93,5 +93,5 @@
 
         </div>
 
-    </div>
+
 </div>

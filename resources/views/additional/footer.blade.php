@@ -1,7 +1,7 @@
 <footer class="main-footer uk-position-bottom-center-out uk-position-relative " role="contentinfo">
 
-    <div class="uk-container">
-        <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-3@m uk-child-width-1-3@l" uk-grid>
+    <div class="uk-container-1">
+        <div class="uk-grid-match uk-child-width-1-3@s uk-child-width-1-3@m uk-child-width-1-3@l" uk-grid>
             <div>
                 <p>© SpaAfrodita 2021</p>
             </div>

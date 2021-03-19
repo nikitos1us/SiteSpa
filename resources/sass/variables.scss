@@ -3,6 +3,11 @@
     src: url(fonts/beatrice.ttf); /* Путь к файлу со шрифтом */
 }
 
+@font-face {
+    font-family: Futurespore Cyrillic; /* Гарнитура шрифта */
+    src: url(fonts/futurespore_cyrillic.otf); /* Путь к файлу со шрифтом */
+}
+
 
 * {
     margin: 0;
@@ -11,6 +16,9 @@
 
 html {
     font-family: 'Open Sans', sans-serif;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('files/fon3.png');
+    background-repeat: repeat;
 }
 
 body {
@@ -23,14 +31,18 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: normal;
     hyphens: auto;
-    background: url(files/background2.png);
-    background-position: center center;
-    background-size: cover;
+
+
+
+}
+
+body:after {
+    background: rgba(0, 0, 0, .5);
 }
 
 html,
 body {
-    height: 100%;
+    height: 100vh;
 }
 
 .wrapper {
@@ -99,19 +111,33 @@ main {
 
 
 /* UIkit reformated styles */
-
 /* Menu */
 .uk-navbar-dropdown-nav > li > a {
-    color: #d0948a;
+    color: #b81300;
+    font-family: "Futurespore Cyrillic";
     font-size: 1.5vw;
+    font-weight: bold;
 }
 
 .uk-navbar-dropdown-nav > li:hover > a,
 .uk-navbar-dropdown-nav > li > a:focus,
 .uk-navbar-dropdown-nav > li > a.uk-open {
-    color: #d0d1fc;
+    color: rgb(65, 3, 52);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 10px rgb(112, 66, 183),
+    0 0 20px rgb(177, 94, 94), 0 0 30px rgb(177, 94, 94),
+    0 0 40px rgb(255, 133, 245), 0 0 70px rgb(255, 133, 245),
+    0 0 80px rgb(255, 17, 119), 0 0 100px rgb(255, 17, 119),
+    0 0 150px rgb(255, 17, 119);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
     outline: none;
 }
+
 
 .uk-nav-center {
     width: 100%;
@@ -121,7 +147,13 @@ main {
 
 .uk-navbar-dropdown-nav {
     width: 20vw;
-    background: url(files/menu-fon3.jpg);
+    background: url(files/background1.jpg);
+}
+
+.uk-dropdown {
+    min-width: auto;
+    padding: 0px;
+
 }
 
 
@@ -139,13 +171,12 @@ main {
 }
 
 .uk-transition-slide-bottom-small {
-
     font-size: 5vw;
     color: khaki;
 }
 
 
-/* Для вкладки Персонал */
+/* Персонал */
 .uk-grid {
     .uk-child-width-1-1\@s {
         width: 90%;
@@ -157,6 +188,9 @@ main {
     background: linear-gradient(45deg, #eed1ba, #ecb4b4);
     margin-bottom: 10px;
     padding-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
 
 .uk-card-title {
@@ -167,9 +201,49 @@ main {
     margin-bottom: 20px;
 }
 
+
 /* Прайс-лист */
 .uk-section-default {
-    background: antiquewhite;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('files/background1.jpg');
+}
+
+.uk-table{
+    width: 35vw;
+}
+
+.uk-table-hover > tr:hover,
+.uk-table-hover tbody tr:hover {
+    background: #ffc3f7;
+}
+
+.uk-table th {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #292929;
+}
+
+.uk-table td {
+    padding: 16px 12px;
+    vertical-align: top;
+    font-size: 1vw;
 }
 
 
+@media screen and (max-width: 320px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 640px) {
+    .main-footer{
+        height: 100px;
+        padding-bottom: 10px;;
+    }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 960px) {
+}
+@media screen and (max-width: 1200px) {
+}

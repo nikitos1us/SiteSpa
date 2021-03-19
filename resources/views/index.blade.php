@@ -25,19 +25,18 @@
         </header>
 
         <main>
-            <h1 class="uk-heading-line uk-text-center persons-header"><span>Добро пожаловать на сайт Спа-салона Афродита!</span></h1>
-
+            <h1 class="uk-heading-line uk-text-center persons-header"><span>Добро пожаловать на сайт Спа-салона Афродита!</span>
+            </h1>
+            @include('additional.index_content')
             @include('additional.index_slideshow')
         </main>
 
     </div>
 
-        @include('additional.footer')
+    @include('additional.footer')
 
 </div>
-
 </body>
-
 
 </html>
 
