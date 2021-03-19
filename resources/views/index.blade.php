@@ -1,5 +1,5 @@
 @section('content')
-{{ $content_type }}
+    {{ $content_type }}
 @endsection
 
 
@@ -25,32 +25,15 @@
         </header>
 
         <main>
-
-            <div class="uk-section uk-section-muted" uk-section-intro>
-                <div class="uk-container">
-                    <h3>Добро пожаловать на сайт Спа-салона Афродита!</h3>
-                    <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
-                        <div>
-                            <p>Мы предоставляем различные услуги</p>
-                        </div>
-                        <div>
-                            <p>Например, массаж спины, массаж лица</p>
-                        </div>
-                        <div>
-                            <p>А также у нас есть хамам!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <h1 class="uk-heading-line uk-text-center persons-header"><span>Добро пожаловать на сайт Спа-салона Афродита!</span></h1>
 
             @include('additional.index_slideshow')
-
         </main>
 
     </div>
 
-    @include('additional.footer')
+        @include('additional.footer')
+
 </div>
 
 </body>
