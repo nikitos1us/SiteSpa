@@ -33,7 +33,6 @@ body {
     hyphens: auto;
 
 
-
 }
 
 body:after {
@@ -67,7 +66,7 @@ main {
     width: 100%;
     align-self: center;
     text-align: center;
-    color: brown;
+    color: #2d1754;
 
 
     background: linear-gradient(90deg, #c86c8e 0%, #7c81cd 100%);
@@ -83,8 +82,7 @@ main {
     text-align: center;
 
     font-size: 2.5vw;
-
-    color: brown;
+    color: #2d1754;
     background: linear-gradient(90deg, #c86c8e 0%, #7c81cd 100%);
 
 
@@ -176,16 +174,35 @@ main {
 }
 
 
-/* Персонал */
-.uk-grid {
-    .uk-child-width-1-1\@s {
-        width: 90%;
-        padding-bottom: 15px;
-    }
+.index-content-ch-title {
+    color: #732b00;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
 }
 
+.index-content-ch-title:hover {
+    color: rgb(65, 3, 52);
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-shadow: 0 0 10px rgb(112, 66, 183),
+    0 0 20px rgb(177, 94, 94), 0 0 30px rgb(177, 94, 94),
+    0 0 40px rgb(255, 133, 245), 0 0 70px rgb(255, 133, 245),
+    0 0 80px rgb(255, 17, 119), 0 0 100px rgb(255, 17, 119),
+    0 0 150px rgb(255, 17, 119);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* Персонал */
 .uk-card {
-    background: linear-gradient(45deg, #eed1ba, #ecb4b4);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('files/background1.jpg');
     margin-bottom: 10px;
     padding-bottom: 10px;
     margin-left: 50px;
@@ -209,7 +226,7 @@ main {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('files/background1.jpg');
 }
 
-.uk-table{
+.uk-table {
     width: 35vw;
 }
 
@@ -231,19 +248,35 @@ main {
 }
 
 
+/* Контактная информация */
+iframe {
+    align-self: center;
+    align-content: center;
+    alignment: center;
+    align-items: center;
+    width: 40vw;
+    height: 30vw;
+}
+
+
 @media screen and (max-width: 320px) {
 }
+
 @media screen and (max-width: 480px) {
 }
+
 @media screen and (max-width: 640px) {
-    .main-footer{
+    .main-footer {
         height: 100px;
         padding-bottom: 10px;;
     }
 }
+
 @media screen and (max-width: 768px) {
 }
+
 @media screen and (max-width: 960px) {
 }
+
 @media screen and (max-width: 1200px) {
 }

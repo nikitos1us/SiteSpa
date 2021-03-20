@@ -1,5 +1,5 @@
 <div class="uk-nav-center">
-    <div style="font-family: 'Beatrice';font-size: 2vw;color: saddlebrown"
+    <div style="font-family: 'Beatrice';font-size: 2vw; color: #1e459f;"
          class="uk-button ">MENU
     </div>
     <div uk-dropdown="boundary: .boundary; pos: bottom-center">

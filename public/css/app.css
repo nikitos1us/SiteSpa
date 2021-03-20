@@ -6303,7 +6303,7 @@ ul.uk-nav-sub {
 /* Divider modifier
  ========================================================================== */
 /*
- * Set gutter 
+ * Set gutter
  */
 .uk-subnav-divider {
   margin-left: -41px;
@@ -12478,7 +12478,7 @@ main {
   width: 100%;
   align-self: center;
   text-align: center;
-  color: brown;
+  color: #2d1754;
   background: linear-gradient(90deg, #c86c8e 0%, #7c81cd 100%);
   min-height: 20px;
   max-height: 60px;
@@ -12491,7 +12491,7 @@ main {
   align-self: center;
   text-align: center;
   font-size: 2.5vw;
-  color: brown;
+  color: #2d1754;
   background: linear-gradient(90deg, #c86c8e 0%, #7c81cd 100%);
 }
 
@@ -12568,14 +12568,25 @@ main {
   color: khaki;
 }
 
-/* Персонал */
-.uk-grid .uk-child-width-1-1\@s {
-  width: 90%;
-  padding-bottom: 15px;
+.index-content-ch-title {
+  color: #732b00;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+.index-content-ch-title:hover {
+  color: #410334;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px #7042b7, 0 0 20px #b15e5e, 0 0 30px #b15e5e, 0 0 40px #ff85f5, 0 0 70px #ff85f5, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Персонал */
 .uk-card {
-  background: linear-gradient(45deg, #eed1ba, #ecb4b4);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/background1.jpg?d22c83b06830b8167ea995b7155edf1b);
   margin-bottom: 10px;
   padding-bottom: 10px;
   margin-left: 50px;
@@ -12616,6 +12627,19 @@ main {
   padding: 16px 12px;
   vertical-align: top;
   font-size: 1vw;
+}
+
+/* Контактная информация */
+iframe {
+  align-self: center;
+  align-content: center;
+  alignment: center;
+  align-items: center;
+  width: 40vw;
+  height: 30vw;
+}
+.grid-cont-info{
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 640px) {

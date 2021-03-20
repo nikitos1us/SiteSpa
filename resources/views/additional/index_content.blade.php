@@ -5,21 +5,21 @@
         <div>
             <div class="uk-card uk-card-default uk-card-small">
                 <div class="uk-text-left uk-card-body" style="font-size: 1vw">
-                     В разделе <code>Персонал</code> вы можете ознакомиться с нашими работниками и сферами их деятельности
+                     В разделе <a class="index-content-ch-title" href="./persons">Персонал</a> вы можете ознакомиться с нашими работниками и сферами их деятельности
                 </div>
             </div>
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-small">
                 <div class="uk-text-center uk-card-body" style="font-size: 1vw">
-                    В разделе <code>Прайс-лист</code> представлены цены на наши услуги
+                    В разделе  <a class="index-content-ch-title" href="./price">Прайс-лист</a> представлены цены на наши услуги
                 </div>
             </div>
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-small">
                 <div class="uk-text-right uk-card-body" style="font-size: 1vw">
-                    В разделе <code>Контакты</code> вы можете ознакомиться с контактной информацией и оставить отклик
+                    В разделе  <a class="index-content-ch-title" href="./contacts">Контакты</a> вы можете ознакомиться с контактной информацией и оставить отклик
                 </div>
             </div>
         </div>
