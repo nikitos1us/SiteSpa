@@ -18,4 +18,7 @@ class SiteSpaController extends Controller
     public function price(){
         return view('price');
     }
+    public function conn(){
+        return view('additional.connectDB');
+    }
 }

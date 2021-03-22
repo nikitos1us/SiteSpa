@@ -34,9 +34,10 @@
 
             @include('additional.contacts_content')
             @include('additional.contacts_review')
+            <a href="./connectDB">Tap</a>
+
         </main>
     </div>
-
 </div>
 </body>
 

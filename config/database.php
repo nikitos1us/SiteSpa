@@ -65,15 +65,14 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '5444'),
-            'database' => env('DB_DATABASE', 'text'),
-            'username' => env('DB_USERNAME', 'postgres'),
-            'password' => env('DB_PASSWORD', '1234'),
+            'host' => '127.0.0.1',
+            'port' => '5432',
+            'database' => 'laravel',
+            'username' => 'postgres',
+            'password' => '1111',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [

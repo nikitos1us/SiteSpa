@@ -17,5 +17,6 @@ Route::get( '/',  'App\Http\Controllers\SiteSpaController@index');
 Route::get( '/price',  'App\Http\Controllers\SiteSpaController@price');
 Route::get('/contacts',  'App\Http\Controllers\FormRVController@show');
 Route::get('/persons',  'App\Http\Controllers\SiteSpaController@persons');
+Route::get('/connectDB',  'App\Http\Controllers\SiteSpaController@conn');
 
 Route::post('/contacts',  'App\Http\Controllers\FormRVController@sendRequest')->name('form.store');
