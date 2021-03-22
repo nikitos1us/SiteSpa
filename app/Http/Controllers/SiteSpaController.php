@@ -15,9 +15,6 @@ class SiteSpaController extends Controller
     public function persons(){
         return view('persons');
     }
-    public function contacts(){
-        return view('contacts');
-    }
     public function price(){
         return view('price');
     }

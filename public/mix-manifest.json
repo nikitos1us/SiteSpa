@@ -21,5 +21,6 @@
     "/images/solar.jpg": "/images/solar.jpg",
     "/images/white-buds.png": "/images/white-buds.png",
     "/fonts/beatrice.ttf": "/fonts/beatrice.ttf",
-    "/fonts/futurespore_cyrillic.otf": "/fonts/futurespore_cyrillic.otf"
+    "/fonts/futurespore_cyrillic.otf": "/fonts/futurespore_cyrillic.otf",
+    "/php/send-form.blade.php": "/php/send-form.blade.php"
 }

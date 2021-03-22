@@ -135,7 +135,12 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
-
+    'custom' => [
+        'name' => [
+            'required' => 'The field name is empty! ',
+            'max'=> 'Too long',
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes

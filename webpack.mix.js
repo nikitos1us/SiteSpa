@@ -17,5 +17,7 @@ mix.js('resources/js/app.js', 'public/js')
 
     .copyDirectory('resources/sass/files', 'public/images')
 
-    .copyDirectory('resources/sass/fonts', 'public/fonts');
+    .copyDirectory('resources/sass/fonts', 'public/fonts')
+
+    .copyDirectory('resources/php', 'public/php');
 

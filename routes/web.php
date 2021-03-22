@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get( '/',  'App\Http\Controllers\SiteSpaController@index');
 Route::get( '/price',  'App\Http\Controllers\SiteSpaController@price');
-Route::get('/contacts',  'App\Http\Controllers\SiteSpaController@contacts');
+Route::get('/contacts',  'App\Http\Controllers\FormRVController@show');
 Route::get('/persons',  'App\Http\Controllers\SiteSpaController@persons');
+
+Route::post('/contacts',  'App\Http\Controllers\FormRVController@sendRequest')->name('form.store');
