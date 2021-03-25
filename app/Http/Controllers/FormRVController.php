@@ -18,7 +18,7 @@ class FormRVController extends Controller
     public function sendRequest(FormRVRequest $message, Review $review)
     {
         //send the admin an notification
-        $review->notify(new InboxMessage($message));
+        //$review->notify(new InboxMessage($message));
         // redirect the user back
 
         return redirect()->back()->with('message', 'Спасибо за обращение! Ваше обращение успешно отправлено!');
