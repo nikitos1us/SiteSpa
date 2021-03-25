@@ -21,8 +21,10 @@
         "vue": "^3.0.7"
     },
     "dependencies": {
+        "factory": "^1.0.4",
         "jquery": "^3.6.0",
         "pdo": "^1.1.1",
+        "pgsql": "^1.0.0",
         "sass-loader": "^11.0.1",
         "uikit": "^3.6.17"
     }
