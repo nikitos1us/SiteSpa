@@ -13,3 +13,6 @@
 
 @endsection
 
+@section('footer')
+    @include('additional.footer')
+@endsection
