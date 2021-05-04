@@ -12,12 +12,12 @@ try {
 
     if ($conn) {
         echo "Connected to the <strong>DB</strong> database successfully!";
-        echo "\n";
-        $stid = DB::connection('pgsql')->select('SELECT stid from student');
+        echo "\n"; $stid = DB::connection('pgsql')->select('SELECT stid from student');
 
         foreach ($stid as $user) {
             echo $user->name;
         }
+
 
     }
     //$conn = pg_connect($connStr);
