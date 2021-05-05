@@ -33,6 +33,7 @@ class AdminController extends Controller
             $a = Hash::make($admin->passwd);
             if (Hash::check($request->passwd, $a)) {
                 $request->session()->put('LoggedAdmin', $admin->name);
+                $request->session()->put('LoggedAdminID', $admin->id);
                 return redirect('adminpanel/addvis');
             } else {
                 return back()->with('fail', 'Incorrect password');
@@ -46,6 +47,7 @@ class AdminController extends Controller
     {
         if (session()->has('LoggedAdmin')) {
             session()->pull('LoggedAdmin');
+            session()->pull('LoggedAdminID');
             return redirect('/adminpanel');
         }
     }
@@ -150,11 +152,13 @@ class AdminController extends Controller
 
     function persedit($id)
     {
-       $pers = new Persons();
-        return view('admin.admin_personsedit',['data'=>$pers->find($id)]);
+        $pers = new Persons();
+        return view('admin.admin_personsedit', ['data' => $pers->find($id)]);
 
     }
-    function perseditsubmit(Request $request,$id){
+
+    function perseditsubmit(Request $request, $id)
+    {
         $pers = Persons::find($id);
         $pers->Name = $request->Name;
         $pers->Prof = $request->Prof;
@@ -165,9 +169,44 @@ class AdminController extends Controller
 
     }
 
-    function persdelete($id){
+    function persdelete($id)
+    {
         Persons::find($id)->delete();
         return redirect()->route('adminpanel.persons');
 
     }
+
+    function lkedit($ad)
+    {
+        return view('admin.admin_settings', $ad);
+    }
+
+    function lkeditsubmit(Request $request, $id)
+    {
+        $request->validate([
+            'passwd1' => 'required',
+            'passwd2' => 'required'
+        ]);
+        $pers = Admin::find($id);
+
+
+        $admin = Admin::where('id', '=', $id)->first();
+
+        if ($admin) {
+            $a = Hash::make($admin->passwd);
+
+            if (Hash::check($request->passwd1, $a)) {
+
+                $pers->passwd = $request->passwd2;
+                $pers->save();
+
+                return redirect()->route('adminpanel.settings');
+            } else {
+                return back()->with('fail', 'Incorrect current password');
+            }
+        }
+
+    }
+
+
 }

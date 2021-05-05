@@ -44,4 +44,7 @@ Route::group(['middleware'=>['AuthCheck']],function (){
     Route::post('/adminpanel/perschange/{id}/edit','App\Http\Controllers\AdminController@perseditsubmit' )->name('adminpanel.perseditsubmit');
 
     Route::get('/adminpanel/perschange/{id}/delete','App\Http\Controllers\AdminController@persdelete')->name('adminpanel.persdel');
+
+    Route::get('/adminpanel/lk/{adm}/edit','App\Http\Controllers\AdminController@lkedit' )->name('adminpanel.lkedit');
+    Route::post('/adminpanel/lk/{adm}/edit','App\Http\Controllers\AdminController@lkeditsubmit' )->name('adminpanel.lkeditsubmit');
 });
