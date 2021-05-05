@@ -3,6 +3,7 @@
 namespace app\Http\Controllers;
 
 use App\Models\Persons;
+use App\Models\Services;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +19,8 @@ class SiteSpaController extends Controller
         return view('persons', compact('persons'));
     }
     public function price(){
-        return view('price');
+        $service =Services::all();
+        return view('price', compact('service'));
     }
     public function conn(){
         return view('additional.connectDB');

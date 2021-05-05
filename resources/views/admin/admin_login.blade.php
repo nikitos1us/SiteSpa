@@ -4,9 +4,9 @@
 @endsection
 
 @section('content')
+    <a href="../" style="color: red;background-color: white">Вернуться на домашнюю страницу</a>
+
     <form style="margin-top: 100px;" action="{{route('adminpanel.check')}}" method="post">
-
-
         @if(Session::get('fail'))
             <div class="uk-alert-danger" uk-alert style="background-color: darkseagreen">
                 <a class="uk-alert-close" uk-close></a>

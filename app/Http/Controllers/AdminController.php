@@ -3,6 +3,7 @@
 namespace app\Http\Controllers;
 
 use App\Models\Persons;
+use App\Models\Services;
 use App\Models\Visitors;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -80,6 +81,11 @@ class AdminController extends Controller
     {
         $persons = Persons::all();
         return view('admin.admin_persons', compact('persons'));
+    }
+    function showservices()
+    {
+        $service = Services::all();
+        return view('admin.admin_services', compact('service'));
     }
 
     function vischeck(Request $request1)
@@ -175,7 +181,9 @@ class AdminController extends Controller
         return redirect()->route('adminpanel.persons');
 
     }
-
+/*
+Lichnyy cabinet
+*/
     function lkedit($ad)
     {
         return view('admin.admin_settings', $ad);
@@ -208,5 +216,67 @@ class AdminController extends Controller
 
     }
 
+
+
+    function servcheck(Request $request1)
+    {
+        $request1->validate([
+            'title' => 'required|max: 80',
+            'price' => 'required|max: 5',
+            'length' => 'required|max: 4'
+        ]);
+
+        $serv = new Services();
+        $serv->title = $request1->title;
+        $serv->price = $request1->price;
+        $serv->length = $request1->length;
+
+
+        $service = Services::where('title', '=', $serv->title)->first();
+
+        if (!$service) {
+
+            $save = $serv->save();
+            if ($save) {
+                return back();
+            } else {
+                return back()->with('fail', 'Проверьте правильность заполнения поля Email');
+            }
+
+        } else {
+            return back()->with('fail', 'This visitor is already here');
+        }
+
+
+        return view('admin.admin_services', compact('service'));
+
+    }
+
+    function servedit($id)
+    {
+        $serv = new Services();
+        return view('admin.admin_servicesedit', ['data' => $serv->find($id)]);
+
+    }
+
+    function serveditsubmit(Request $request, $id)
+    {
+        $serv = Services::find($id);
+        $serv->title = $request->title;
+        $serv->price = $request->price;
+        $serv->length = $request->length;
+
+        $serv->save();
+
+        return redirect()->route('adminpanel.services');
+
+    }
+
+    function servdelete($id)
+    {
+        Services::find($id)->delete();
+        return redirect()->route('adminpanel.services');
+
+    }
 
 }

@@ -2,7 +2,7 @@
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li><a href="./addpersons">Сотрудники</a></li>
-            <li><a href="#">Услуги</a></li>
+            <li><a href="./addserv">Услуги</a></li>
             <li><a href="./addvis">Посетителя</a></li>
 
         </ul>

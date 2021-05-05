@@ -49,47 +49,9 @@
                 </div>
 
             </div>
-            <div>
 
-                <div class="uk-cover-container">
-                    <h2 class="uk-h2" style="font-size: 2vw "> Массаж </h2>
-                    <table class="uk-table uk-align-center uk-table-hover uk-table-divider">
 
-                        <thead>
-                        <tr style="align-self: center">
-                            <th>Услуга</th>
-                            <th>Стоимость</th>
-                            <th>Продолжительность</th>
-                        </tr>
-                        </thead>
 
-                        <tbody>
-                        <tr>
-                            <td>Общий массаж</td>
-                            <td>1900 руб.</td>
-                            <td>60 мин.</td>
-                        </tr>
-                        <tr>
-                            <td>Лимфодренажный массаж</td>
-                            <td>2300 руб.</td>
-                            <td>60 мин.</td>
-                        </tr>
-                        <tr>
-                            <td>Антицеллюлитный массаж</td>
-                            <td>2300 руб.</td>
-                            <td>55 мин.</td>
-                        </tr>
-                        <tr>
-                            <td>Релакс массаж</td>
-                            <td>2200 руб.</td>
-                            <td>55 мин.</td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
 
         </div>
 

@@ -30,7 +30,7 @@ Route::post('/adminpanel/check','App\Http\Controllers\AdminController@check')->n
 
 Route::group(['middleware'=>['AuthCheck']],function (){
 
-    Route::get('/adminpanel/admin_main','App\Http\Controllers\AdminController@main')->name('adminpanel.main');
+
     Route::get('/adminpanel/logout','App\Http\Controllers\AdminController@logout')->name('adminpanel.logout');
     Route::get('/adminpanel/settings','App\Http\Controllers\AdminController@settings')->name('adminpanel.settings');
     Route::get('adminpanel/profile','App\Http\Controllers\AdminController@profile');
@@ -40,11 +40,17 @@ Route::group(['middleware'=>['AuthCheck']],function (){
 
     Route::get('/adminpanel/addpersons','App\Http\Controllers\AdminController@showpersons')->name('adminpanel.persons');
     Route::get('/adminpanel/perscheck','App\Http\Controllers\AdminController@perscheck')->name('adminpanel.perscheck');
-    Route::get('/adminpanel/perschange/{id}/edit','App\Http\Controllers\AdminController@persedit' )->name('adminpanel.persedit');
-    Route::post('/adminpanel/perschange/{id}/edit','App\Http\Controllers\AdminController@perseditsubmit' )->name('adminpanel.perseditsubmit');
+    Route::get('/adminpanel/perschange/{id}/edit', 'App\Http\Controllers\AdminController@persedit')->name('adminpanel.persedit');
+    Route::post('/adminpanel/perschange/{id}/edit', 'App\Http\Controllers\AdminController@perseditsubmit')->name('adminpanel.perseditsubmit');
+    Route::get('/adminpanel/perschange/{id}/delete', 'App\Http\Controllers\AdminController@persdelete')->name('adminpanel.persdel');
 
-    Route::get('/adminpanel/perschange/{id}/delete','App\Http\Controllers\AdminController@persdelete')->name('adminpanel.persdel');
+    Route::get('/adminpanel/addserv','App\Http\Controllers\AdminController@showservices')->name('adminpanel.services');
+    Route::get('/adminpanel/servcheck','App\Http\Controllers\AdminController@servcheck')->name('adminpanel.servcheck');
+    Route::get('/adminpanel/serv/{id}/edit', 'App\Http\Controllers\AdminController@servedit')->name('adminpanel.servedit');
+    Route::post('/adminpanel/serv/{id}/edit', 'App\Http\Controllers\AdminController@serveditsubmit')->name('adminpanel.serveditsubmit');
+    Route::get('/adminpanel/serv/{id}/delete', 'App\Http\Controllers\AdminController@servdelete')->name('adminpanel.servdelete');
 
     Route::get('/adminpanel/lk/{adm}/edit','App\Http\Controllers\AdminController@lkedit' )->name('adminpanel.lkedit');
     Route::post('/adminpanel/lk/{adm}/edit','App\Http\Controllers\AdminController@lkeditsubmit' )->name('adminpanel.lkeditsubmit');
+
 });

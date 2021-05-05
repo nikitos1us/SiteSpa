@@ -6,7 +6,6 @@
 
 @section('content')
 
-<p>Sosat' huetc</p>
 
 @endsection
 
