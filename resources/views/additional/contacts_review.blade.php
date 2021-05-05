@@ -4,16 +4,42 @@
         <div class="uk-card uk-card-primary ">
             <div class="uk-card-body">
 
-                <form method="POST" action="/contacts" >
-                    {{ csrf_field() }}
+                <form method="POST" action="{{route('review.check')}}">
+
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    @if(Session::get('fail'))
+                        <div class="uk-alert-danger" uk-alert style="background-color: darkseagreen">
+                            <a class="uk-alert-close" uk-close></a>
+                            <p>
+                            <div class="alert alert-danger" style="font-size: 20px;font-weight: bold;">
+                                {{Session::get('fail')}}
+                            </div>
+                            </p>
+                        </div>
+                    @endif
+
+                    @csrf
                     <div class="uk-fieldset">
                         <legend class="uk-legend">Форма обратной связи</legend>
 
-                        <label>Введите ваше имя: <input class="uk-input @error('title') is-invalid @enderror" type="text" placeholder="Имя"
-                                                        name="name"></label>
+                        <label>Введите ваше имя: <input class="uk-input @error('title') is-invalid @enderror"
+                                                        type="text" placeholder="Имя"
+                                                        name="name" value="{{old('name')}}"></label>
                         <br><br>
 
-                        <label>Введите ваш E-mail:<input class="uk-input @error('title') is-invalid @enderror" type="text" placeholder="E-mail" name="email"></label>
+                        <label>Введите ваш E-mail:<input class="uk-input @error('title') is-invalid @enderror"
+                                                         type="text" placeholder="E-mail" name="email"
+                                                         value="{{old('email')}}"></label>
                         <br><br>
 
                         <label>Пол:
@@ -27,21 +53,12 @@
                         <br>
 
                         <div class="uk-margin">
-                            <textarea class="uk-textarea @error('title') is-invalid @enderror" rows="5" placeholder="Textarea" name="comment"></textarea>
+                            <textarea class="uk-textarea @error('title') is-invalid @enderror" rows="5"
+                                      placeholder="Textarea" name="comment"></textarea>
                         </div>
                         <br>
 
                         <button class="uk-button uk-button-danger" type="submit" name="submit">Отправить</button>
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
 
                     </div>

@@ -2,6 +2,7 @@
 
 namespace app\Http\Controllers;
 
+use App\Models\Visitors;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
@@ -29,7 +30,7 @@ class AdminController extends Controller
             $a = Hash::make($admin->passwd);
             if(Hash::check($request->passwd,$a)){
                     $request->session()->put('LoggedAdmin',$admin->name);
-                    return redirect('adminpanel/admin_main');
+                    return redirect('adminpanel/addvis');
             }else{
                 return back()->with('fail','Incorrect password');
             }
@@ -52,11 +53,54 @@ class AdminController extends Controller
 
     function settings(){
         $data = ['LoggedAdmin'=>Admin::where('name','=',session('LoggedAdmin'))->first()];
-        return view('admin.settings',$data);
+        return view('admin.admin_settings',$data);
     }
 
     function profile(){
         $data = ['LoggedAdmin'=>Admin::where('name','=',session('LoggedAdmin'))->first()];
         return view('admin.profile',$data);
+    }
+
+    function showvisitors(){
+        $visitors = Visitors::all();
+        return view('admin.admin_addvis', compact('visitors'));
+    }
+
+
+    function vischeck(Request $request1){
+        $request1->validate([
+            'Name' => 'required|max: 80',
+            'Email' => 'required|email|max: 255',
+        ]);
+
+        $vis = new Visitors();
+        $vis->Name = $request1->Name;
+        $vis->Email = $request1->Email;
+
+        $email = $request1->Email;
+
+        $visitor = Visitors::where('Email', '=', $request1->Email)->first();
+
+
+        if (!$visitor) {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL) !== false)
+            {
+                $save = $vis->save();
+                if ($save) {
+                    return back();
+                }
+            }
+            else
+            {
+                return back()->with('fail', 'Проверьте правильность заполнения поля Email');
+            }
+
+        } else {
+            return back()->with('fail', 'This visitor is already here');
+        }
+
+
+        return view('admin.admin_addvis', compact('visitors'));
+
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Visitors;
 use Illuminate\Http\Request;
 use App\Notifications\InboxMessage;
 use App\Http\Controllers\Controller;
@@ -17,11 +18,36 @@ class FormRVController extends Controller
 
     public function sendRequest(FormRVRequest $message, Review $review)
     {
-        //send the admin an notification
-        //$review->notify(new InboxMessage($message));
-        // redirect the user back
+    }
 
-        return redirect()->back()->with('message', 'Спасибо за обращение! Ваше обращение успешно отправлено!');
+    function revcheck(Request $request)
+    {
+
+        $request->validate([
+            'name' => 'required|max: 80',
+            'email' => 'required|email|max: 255',
+            'comment' => 'required|min: 10'
+        ]);
+
+        $rev = new Review();
+        $rev->name = $request->name;
+        $rev->email = $request->email;
+        $rev->comment = $request->comment;
+
+        $visitor = Visitors::where('Email', '=', $request->email)->first();
+
+        if (!$visitor) {
+            return back()->with('fail', 'No such visitor');
+        } else {
+            $save = $rev->save();
+
+            if ($save) {
+                return back();
+            } else {
+                return back()->with('fail', 'Проверьте правильность заполнения полей');
+            }
+        }
+
 
     }
 }
