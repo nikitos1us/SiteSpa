@@ -34,6 +34,14 @@ Route::group(['middleware'=>['AuthCheck']],function (){
     Route::get('/adminpanel/logout','App\Http\Controllers\AdminController@logout')->name('adminpanel.logout');
     Route::get('/adminpanel/settings','App\Http\Controllers\AdminController@settings')->name('adminpanel.settings');
     Route::get('adminpanel/profile','App\Http\Controllers\AdminController@profile');
+
     Route::get('/adminpanel/addvis','App\Http\Controllers\AdminController@showvisitors');
     Route::get('/adminpanel/vischeck','App\Http\Controllers\AdminController@vischeck')->name('adminpanel.vischeck');
+
+    Route::get('/adminpanel/addpersons','App\Http\Controllers\AdminController@showpersons')->name('adminpanel.persons');
+    Route::get('/adminpanel/perscheck','App\Http\Controllers\AdminController@perscheck')->name('adminpanel.perscheck');
+    Route::get('/adminpanel/perschange/{id}/edit','App\Http\Controllers\AdminController@persedit' )->name('adminpanel.persedit');
+    Route::post('/adminpanel/perschange/{id}/edit','App\Http\Controllers\AdminController@perseditsubmit' )->name('adminpanel.perseditsubmit');
+
+    Route::get('/adminpanel/perschange/{id}/delete','App\Http\Controllers\AdminController@persdelete')->name('adminpanel.persdel');
 });

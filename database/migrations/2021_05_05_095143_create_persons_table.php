@@ -17,7 +17,7 @@ class CreatePersonsTable extends Migration
             $table->bigIncrements('id');
             $table->string('Name');
             $table->string('Prof');
-
+            $table->timestamps();
         });
     }
 
