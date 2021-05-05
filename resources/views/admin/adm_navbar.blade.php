@@ -1,10 +1,9 @@
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li><a href="./addpersons">Изменение Сотрудников</a></li>
-            <li><a href="#">Изменение Услуг</a></li>
-            <li><a href="#">Контроль Отзывов</a></li>
-            <li><a href="./addvis">Добавить посетителя</a></li>
+            <li><a href="./addpersons">Сотрудники</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="./addvis">Посетителя</a></li>
 
         </ul>
 
@@ -12,10 +11,10 @@
     <div class="uk-navbar-right" style="margin-right: 10px;">
 
         <ul class="uk-navbar-nav">
-            <li><a href="./settings">Настройки профиля</a></li>
+            <li><a href="./settings">Кабинет администратора</a></li>
         </ul>
         <ul class="uk-navbar-nav">
-            <a href="{{ route('adminpanel.logout') }}">Logout</a>
+            <a href="{{ route('adminpanel.logout') }}">Выйти</a>
         </ul>
 
     </div>

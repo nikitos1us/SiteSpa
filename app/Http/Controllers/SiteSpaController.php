@@ -2,6 +2,7 @@
 
 namespace app\Http\Controllers;
 
+use App\Models\Persons;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,7 +14,8 @@ class SiteSpaController extends Controller
         return view('index')->with('content_type','main');
     }
     public function persons(){
-        return view('persons');
+        $persons =Persons::all();
+        return view('persons', compact('persons'));
     }
     public function price(){
         return view('price');
@@ -21,4 +23,6 @@ class SiteSpaController extends Controller
     public function conn(){
         return view('additional.connectDB');
     }
+
+
 }

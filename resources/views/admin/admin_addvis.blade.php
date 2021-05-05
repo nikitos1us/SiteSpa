@@ -24,7 +24,7 @@
 
 
     <div class="uk-margin uk-inline">
-        <p style="color: darkmagenta; font-weight: bold; font-size: 40px; ">All visitors</p>
+        <p style="color: darkmagenta; font-weight: bold; font-size: 40px; ">Посетители</p>
         <table class="uk-table uk-table-hover uk-table-divider" style="background-color: #ffe9aa;">
             <thead>
             <tr>
